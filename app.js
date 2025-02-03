@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonAgregar = document.querySelector(".button-add");
     const listaAmigos = document.getElementById("listaAmigos");
     const botonSortear = document.querySelector(".button-draw");
+    const botonReiniciar = document.querySelector(".button-reset");
     const resultado = document.getElementById("resultado");
     
     botonAgregar.addEventListener("click", agregarAmigo);
     botonSortear.addEventListener("click", sortearAmigo);
+    botonReiniciar.addEventListener("click", reiniciarLista);
     
     function agregarAmigo() {
         let nombre = inputNombre.value.trim();
@@ -49,5 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
         
         resultado.innerHTML = `<p>El amigo sorteado es: <strong>${amigoSorteado}</strong></p>`;
     }
+    
+    function reiniciarLista() {
+        amigos = [];
+        listaAmigos.innerHTML = "";
+        resultado.innerHTML = "";
+        console.log("Lista de amigos reiniciada.");
+    }
 });
+
 
