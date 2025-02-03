@@ -7,5 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     botonAgregar.addEventListener("click"), ()  => {
         //Capturar el valor del campo de entrada
         let nombre = inputNombre.ariaValueMax.trim(); 
-
+         // Validar la entrada
+         if (nombre === "") {
+            alert("Por favor, inserte un nombre.");
+            return;
+        }
 });  
