@@ -11,5 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
          if (nombre === "") {
             alert("Por favor, inserte un nombre.");
             return;
-        }
-});  
+         // Actualizar el array de amigos
+         amigos.push(nombre);
+        
+         // Limpiar el campo de entrada
+         inputNombre.value = "";
+         
+         console.log(amigos);
+     });
+ });
